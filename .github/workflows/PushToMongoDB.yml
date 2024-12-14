@@ -42,8 +42,8 @@ jobs:
             print(e)
             raise SystemExit(1)
 
-        # Insert a document
-        db = client.get_default_database()  # Adjust if a specific database name is required
+        # Connect to the 'Debi' database
+        db = client['Debi']
         git_collection = db['Git']
         document = {
             "timestamp": datetime.utcnow().isoformat(),
